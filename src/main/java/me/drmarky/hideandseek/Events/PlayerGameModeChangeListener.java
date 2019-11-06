@@ -1,6 +1,6 @@
 package me.drmarky.hideandseek.Events;
 
-import com.intellectualcrafters.plot.object.PlotPlayer;
+import com.github.intellectualsites.plotsquared.plot.object.PlotPlayer;
 import me.drmarky.hideandseek.Utilities.Data;
 import org.bukkit.GameMode;
 import org.bukkit.event.EventHandler;

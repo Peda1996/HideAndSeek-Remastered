@@ -1,7 +1,7 @@
 package me.drmarky.hideandseek.Events;
 
-import com.intellectualcrafters.plot.object.Plot;
-import com.intellectualcrafters.plot.object.PlotPlayer;
+import com.github.intellectualsites.plotsquared.plot.object.Plot;
+import com.github.intellectualsites.plotsquared.plot.object.PlotPlayer;
 import me.drmarky.hideandseek.Tasks.Tag;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

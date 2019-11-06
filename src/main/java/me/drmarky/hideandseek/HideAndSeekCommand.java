@@ -1,14 +1,19 @@
 package me.drmarky.hideandseek;
 
-import com.intellectualcrafters.plot.commands.CommandCategory;
-import com.intellectualcrafters.plot.commands.MainCommand;
-import com.intellectualcrafters.plot.commands.RequiredType;
-import com.intellectualcrafters.plot.commands.SubCommand;
-import com.intellectualcrafters.plot.config.C;
-import com.intellectualcrafters.plot.object.Location;
-import com.intellectualcrafters.plot.object.Plot;
-import com.intellectualcrafters.plot.object.PlotPlayer;
-import com.plotsquared.general.commands.CommandDeclaration;
+import com.github.intellectualsites.plotsquared.plot.config.Captions;
+import com.github.intellectualsites.plotsquared.plot.object.Plot;
+import com.github.intellectualsites.plotsquared.plot.object.PlotPlayer;
+import com.github.intellectualsites.plotsquared.plot.util.PlotGameMode;
+
+import com.github.intellectualsites.plotsquared.plot.commands.CommandCategory;
+import com.github.intellectualsites.plotsquared.plot.commands.MainCommand;
+import com.github.intellectualsites.plotsquared.plot.commands.RequiredType;
+import com.github.intellectualsites.plotsquared.plot.commands.SubCommand;
+import com.github.intellectualsites.plotsquared.plot.config.Captions;
+import com.github.intellectualsites.plotsquared.plot.object.Location;
+import com.github.intellectualsites.plotsquared.plot.object.Plot;
+import com.github.intellectualsites.plotsquared.plot.object.PlotPlayer;
+import com.github.intellectualsites.plotsquared.commands.CommandDeclaration;
 import me.drmarky.hideandseek.Tasks.ListPlayers;
 import me.drmarky.hideandseek.Tasks.RegisterPlayers;
 import me.drmarky.hideandseek.Tasks.StartGame;
@@ -16,6 +21,8 @@ import me.drmarky.hideandseek.Tasks.StopGame;
 import me.drmarky.hideandseek.Utilities.Data;
 import me.drmarky.hideandseek.Utilities.Utils;
 import org.bukkit.ChatColor;
+
+import java.lang.annotation.Annotation;
 
 @CommandDeclaration(
         command = "hideandseek",
@@ -34,7 +41,10 @@ public class HideAndSeekCommand extends SubCommand {
     private final ListPlayers listPlayers;
 
     public HideAndSeekCommand(RegisterPlayers registerPlayers, StartGame startGame, StopGame stopGame, ListPlayers listPlayers) {
-        MainCommand.getInstance().addCommand(this);
+        //MainCommand.getInstance().init(this);
+
+        //TODO this is a hack for now!
+        MainCommand.getInstance().getCommands().add(this);
         this.registerPlayers = registerPlayers;
         this.startGame = startGame;
         this.stopGame = stopGame;

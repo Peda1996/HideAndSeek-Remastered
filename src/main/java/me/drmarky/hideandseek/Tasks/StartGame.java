@@ -1,8 +1,8 @@
 package me.drmarky.hideandseek.Tasks;
 
-import com.intellectualcrafters.plot.object.Plot;
-import com.intellectualcrafters.plot.object.PlotPlayer;
-import com.intellectualcrafters.plot.util.PlotGameMode;
+import com.github.intellectualsites.plotsquared.plot.object.Plot;
+import com.github.intellectualsites.plotsquared.plot.object.PlotPlayer;
+import com.github.intellectualsites.plotsquared.plot.util.PlotGameMode;
 import me.drmarky.hideandseek.Main;
 import me.drmarky.hideandseek.Utilities.Data;
 import me.drmarky.hideandseek.Utilities.Utils;

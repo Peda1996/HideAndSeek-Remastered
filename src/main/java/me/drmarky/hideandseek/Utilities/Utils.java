@@ -1,9 +1,10 @@
 package me.drmarky.hideandseek.Utilities;
 
-import com.intellectualcrafters.plot.config.C;
-import com.intellectualcrafters.plot.object.Plot;
-import com.intellectualcrafters.plot.object.PlotPlayer;
-import com.intellectualcrafters.plot.util.PlotGameMode;
+
+import com.github.intellectualsites.plotsquared.plot.config.Captions;
+import com.github.intellectualsites.plotsquared.plot.object.Plot;
+import com.github.intellectualsites.plotsquared.plot.object.PlotPlayer;
+import com.github.intellectualsites.plotsquared.plot.util.PlotGameMode;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.Material;
@@ -18,13 +19,13 @@ public class Utils {
 
     // Sends a message that has a blank line before and after it as well as a PlotSquared prefix.
     public static void sendSpacedMessage(PlotPlayer plotPlayer, String string) {
-        plotPlayer.sendMessage("\n" + C.PREFIX + string + "\n ");
+        plotPlayer.sendMessage("\n" + Captions.PREFIX + string + "\n ");
     }
 
     // Sends a message to a list of players.
     public static void sendListMessage(ArrayList<PlotPlayer> list, String string) {
         for (PlotPlayer plotPlayer : list) {
-            plotPlayer.sendMessage("\n" + C.PREFIX + string + "\n ");
+            plotPlayer.sendMessage("\n" + Captions.PREFIX + string + "\n ");
         }
     }
 
@@ -112,12 +113,12 @@ public class Utils {
 
     // Blinds the player for a specified amount of seconds (duration)
     public static void blindPlayer(Player player, int duration) {
-        player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, duration * 20, 100, true, false, Color.BLACK));
+        //player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, duration * 20, 100, true, false, Color.BLACK));
     }
 
     // Gives the player speed for a specified amount of minutes (duration)
     public static void quickenPlayer(Player player, int duration) {
-        player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, duration * 1200, 0, true, false, Color.BLACK));
+        //player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, duration * 1200, 0, true, false, Color.BLACK));
     }
 
     // Reverses all the settings applied to the player when they joined the game
@@ -129,9 +130,7 @@ public class Utils {
         Utils.revertElytra(player);
         Utils.clearEffects(player);
 
-        if (Data.frozen.contains(plotPlayer.getUUID())) {
-            Data.frozen.remove(plotPlayer.getUUID());
-        }
+        Data.frozen.remove(plotPlayer.getUUID());
 
         Data.directory.remove(plotPlayer);
         plotPlayer.setGameMode(PlotGameMode.CREATIVE);

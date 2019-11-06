@@ -14,7 +14,7 @@
 
     <artifactId>hideandseek-remastered</artifactId>
 
-    <version>2.0.2</version>
+    <version>2.1</version>
 
     <repositories>
 
@@ -40,8 +40,8 @@
         </repository>
 
         <repository>
-            <id>plotsquared-repo</id>
-            <url>http://ci.athion.net/job/PlotSquared/ws/mvn/</url>
+            <id>p2-repo</id>
+            <url>http://ci.athion.net/job/PlotSquared-Breaking/ws/mvn/</url>
         </repository>
 
     </repositories>
@@ -63,24 +63,18 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.12-R0.1-SNAPSHOT</version>
+            <version>1.14-R0.1-SNAPSHOT</version>
             <type>jar</type>
             <scope>provided</scope>
 
         </dependency>
 
-        <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>craftbukkit</artifactId>
-            <version>1.12-R0.1-SNAPSHOT</version>
-            <type>jar</type>
-            <scope>provided</scope>
-        </dependency>
 
+        <!-- PlotSquared API -->
         <dependency>
-            <groupId>com.plotsquared</groupId>
-            <artifactId>plotsquared-api</artifactId>
-            <version>17.08.09-ac9042b-1895</version>
+            <groupId>com.github.intellectualsites.plotsquared</groupId>
+            <artifactId>PlotSquared-API</artifactId>
+            <version>latest</version>
         </dependency>
 
     </dependencies>

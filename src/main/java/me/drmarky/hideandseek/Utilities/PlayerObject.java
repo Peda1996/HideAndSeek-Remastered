@@ -1,6 +1,6 @@
 package me.drmarky.hideandseek.Utilities;
 
-import com.intellectualcrafters.plot.object.Plot;
+import com.github.intellectualsites.plotsquared.plot.object.Plot;
 
 public class PlayerObject {
 

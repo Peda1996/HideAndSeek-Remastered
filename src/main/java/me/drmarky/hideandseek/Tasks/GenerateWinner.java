@@ -1,6 +1,6 @@
 package me.drmarky.hideandseek.Tasks;
 
-import com.intellectualcrafters.plot.object.Plot;
+import com.github.intellectualsites.plotsquared.plot.object.Plot;
 import me.drmarky.hideandseek.Utilities.Utils;
 import org.bukkit.ChatColor;
 
